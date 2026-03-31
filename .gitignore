@@ -1,0 +1,7 @@
+# Local Netlify folder
+.netlify
+
+# Environment and secrets (do not commit)
+.env
+.env.local
+.env.*.local

@@ -1,0 +1,38 @@
+{
+  "name": "kemboja-juara-travels",
+  "version": "1.0.0",
+  "description": "Premium travel booking website with email functionality",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server-stripe.js",
+    "dev": "nodemon server-stripe.js",
+    "favicons": "node scripts/generate-favicons.js",
+    "test-email": "curl -X POST http://localhost:8080/api/test-email -H 'Content-Type: application/json' -d '{\"email\":\"test@example.com\"}'",
+    "health": "curl http://localhost:3000/api/health"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.95.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^4.22.1",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^6.10.1",
+    "pg": "^8.18.0",
+    "qrcode": "^1.5.4",
+    "resend": "^6.1.2",
+    "stripe": "^20.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2",
+    "sharp": "^0.34.5"
+  },
+  "keywords": [
+    "travel",
+    "booking",
+    "email",
+    "tours"
+  ],
+  "author": "Kemboja Juara Travels",
+  "license": "MIT"
+}

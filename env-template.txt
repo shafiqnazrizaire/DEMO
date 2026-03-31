@@ -1,0 +1,58 @@
+# ========================================
+# STRIPE CONFIGURATION
+# ========================================
+# Get your keys from: https://dashboard.stripe.com/apikeys
+STRIPE_SECRET_KEY=sk_test_your_stripe_secret_key_here
+STRIPE_PUBLISHABLE_KEY=pk_test_your_stripe_publishable_key_here
+
+# Webhook signing secret (get from: https://dashboard.stripe.com/webhooks)
+STRIPE_WEBHOOK_SECRET=whsec_your_webhook_secret_here
+
+# ========================================
+# DATABASE CONFIGURATION (PostgreSQL)
+# ========================================
+# Format: postgresql://username:password@host:port/database
+DATABASE_URL=postgresql://username:password@localhost:5432/kemboja_bookings
+
+# ========================================
+# EMAIL CONFIGURATION (mail sending)
+# ========================================
+# Local: Gmail (use App Password: https://myaccount.google.com/apppasswords)
+EMAIL_USER=your-email@gmail.com
+# Use EMAIL_PASS or EMAIL_PASSWORD. If value has spaces, use quotes: EMAIL_PASS="xxxx xxxx xxxx xxxx"
+EMAIL_PASS=your-16-char-app-password
+EMAIL_TO=company@example.com
+EMAIL_SERVICE=gmail
+
+# Company email for booking notifications (optional; falls back to EMAIL_USER)
+COMPANY_EMAIL=kembojajuaratravels@gmail.com
+
+# Production: set one of these (recommended: SendGrid)
+# SENDGRID_API_KEY=SG.xxxx
+# AWS_SES_ACCESS_KEY=your_smtp_user
+# AWS_SES_SECRET_KEY=your_smtp_password
+# AWS_SES_REGION=ap-southeast-1
+# Sender address (required for SendGrid/SES)
+# EMAIL_FROM=noreply@yourdomain.com
+
+# ========================================
+# APPLICATION CONFIGURATION
+# ========================================
+NODE_ENV=development
+PORT=3001
+
+# Your domain URL (use full URL for production)
+DOMAIN_URL=http://localhost:3000
+
+# Optional: logo and package images (HTTPS URLs for Stripe Checkout)
+# LOGO_URL=https://yoursite.com/logo.png
+# PACKAGE_IMAGE_PACKAGE_A=https://yoursite.com/images/package-a.jpg
+
+# ========================================
+# NOTES
+# ========================================
+# 1. Never commit this file with real values
+# 2. For Gmail, use App-Specific Password (not regular password)
+#    Generate at: https://myaccount.google.com/apppasswords
+# 3. For production, use environment variables instead of .env file
+# 4. Test webhook locally using Stripe CLI: stripe listen --forward-to localhost:3001/api/webhook
